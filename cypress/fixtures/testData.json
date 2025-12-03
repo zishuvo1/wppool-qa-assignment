@@ -1,0 +1,15 @@
+{
+  "flextable": {
+    "tableTitle": "Automation Test Table",
+    "tableDescription": "This table is created for WPPOOL QA Automation Testing",
+    "shortcode": "[gswpts_table id= 5]",
+    "rowsPerPage": 20,
+    "tableHeight": "400px",
+    "layoutOptions": {
+      "showTitle": true,
+      "showDescriptionBelow": true,
+      "showEntryInfo": true,
+      "showPagination": true
+    }
+  }
+}

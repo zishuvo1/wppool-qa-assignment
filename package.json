@@ -1,0 +1,14 @@
+{
+  "name": "cypress-wppool",
+  "version": "1.0.0",
+  "description": "WPPOOL QA Automation using Cypress + POM",
+  "scripts": {
+    "open": "cypress open",
+    "test": "cypress run"
+  },
+  "dependencies": {
+    "cypress": "^15.7.0",
+    "cypress-file-upload": "^5.0.8",
+    "dotenv": "^16.0.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "wordpress": {
+    "loginUrl": "http://wppool-test.local/wp-login.php",
+    "adminUrl": "http://wppool-test.local/wp-admin/",
+    "username": "admin",
+    "password": "admin123"
+  },
+
+  "flextable": {
+    "dashboardUrl": "http://wppool-test.local/wp-admin/admin.php?page=gswpts-dashboard#/",
+    "createPageUrl": "http://wppool-test.local/wp-admin/admin.php?page=gswpts-dashboard#/tables/create",
+    "googleSheetUrl": "https://docs.google.com/spreadsheets/d/1U0woe3PTdVlPsrIbSSAJVIpwcVQw66P-pJf8V1u0ZSs/edit?usp=sharing",
+    "frontendPageUrl": "http://wppool-test.local/flextable-test-page/"
+  },
+
+  "woocommerce": {
+    "shopUrl": "http://wppool-test.local/shop/",
+    "checkoutUrl": "http://wppool-test.local/checkout/",
+    "myAccountUrl": "http://wppool-test.local/my-account/",
+    "ordersUrl": "http://wppool-test.local/my-account/orders/",
+    "productName": "Test Product 1",
+    "billing": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "address": "123 Test Street",
+      "city": "Dhaka",
+      "phone": "01700000000",
+      "email": "test@example.com"
+    }
+  }
+}
