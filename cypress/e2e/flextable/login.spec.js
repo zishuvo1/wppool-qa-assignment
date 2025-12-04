@@ -12,15 +12,15 @@ describe("WP Login Test", () => {
     cy.log("WP_URL:", wpUrl);
     cy.log("WP_USERNAME:", username);
 
-    // Visit login page
+   
     cy.visit(wpUrl);
 
-    // Fill credentials
+   
     cy.get("#user_login").type(username);
     cy.get("#user_pass").type(password);
     cy.get("#wp-submit").click();
 
-    // Verify dashboard loaded
+    
     cy.url().should("include", "/wp-admin/");
   });
 
