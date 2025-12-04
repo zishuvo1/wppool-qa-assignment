@@ -1,0 +1,56 @@
+"WPPOOL – QA Assignment Manual Test Cases
+
+Prepared by: Md. Zahidul Islam
+Test Type: Functional + UI
+Plugin: FlexTable | Module: WooCommerceWPPOOL – QA Assignment Manual Test Cases",,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+Part A — FlexTable Automation Test Cases,,,,,,
+,,,,,,
+Test Case ID,Test Scenario,Precondition,Test Steps,Expected Result,Actual Result,Status
+TC-FT-01,Verify WordPress Login,Valid credentials available,"1. Navigate to login page
+2. Enter username & password
+3. Click ""Log In""",Redirects to Dashboard without error,Redirects to Dashboard without error,PASS
+TC-FT-02,Plugin Activation Status,Logged into WP Admin,"1. Go to Plugins → Installed Plugins
+2. Search FlexTable
+3. If inactive → Activate",FlexTable plugin active & visible,FlexTable plugin active & visible,PASS
+TC-FT-03,Navigate to FlexTable Dashboard,Plugin activated,"1. WP Admin → FlexTable → Dashboard
+2. Wait for UI load",FlexTable Dashboard loads without errors,FlexTable Dashboard loads without errors,PASS
+TC-FT-04,Create New Table (Google Sheet Input),Plugin active,"1. Click “Create New Table”
+2. Enter Sheet URL, Title, Description
+3. Click “Save changes”
+4. Return to Dashboard",New entry visible with correct name,New entry visible with correct name,PASS
+TC-FT-05,Table Display Using Shortcode,Table created,"1. Copy shortcode
+2. Create new page & insert shortcode
+3. Check frontend
+4. Compare 3–5 cells with Sheet",Table correctly matches Sheet data,Table correctly matches Sheet data,PASS
+TC-FT-06,Enable Table Title & Description,Table exists,"1. Edit Table
+2. Layout → Enable ‘Show Title’ & ‘Description’
+3. Click Save 
+4. Check frontend",Title above & Description below table,Title above & Description below table,PASS
+TC-FT-07,Enable Entry Info,Table exists,"1. Edit Table
+2. Layout → Bottom Elements
+3. Enable options
+4. Save
+5. Check frontend via class/style",Entry Info & styled,Entry Info & styled,PASS
+TC-FT-08,Update Rows Per Page & Table Height,Table exists,"1. Edit Table
+2. Styling
+3. Change rows & height
+4. Save & Check frontend",Values match frontend display,Values match frontend display,PASS
+TC-FT-09,Delete Table & Verify Removal,Table created & shortcode on page,"1. Delete table
+2. Revisit frontend","Table removed, error/empty state shown","Table removed, error/empty state shown",PASS
+,,,,,,
+Part B — WooCommerce Test Scenarios,,,,,,
+,,,,,,
+Test Case ID,Test Scenario,Precondition,Steps,Expected Result,Actual Result,Status
+TC-WC-01,End-to-End Checkout,Product available & payment active,"1. Add to cart
+2. Go to checkout
+3. Enter billing/shipping
+4. Select payment
+5. Place order",Payment success & Order visible in backend,Payment success & Order visible in backend,PASS
+TC-WC-02,User Order History,User account exists with past order,"1. Login
+2. My Account → Orders
+3. Verify details",Order history visible & matches backend,Order history visible & matches backend,PASS
