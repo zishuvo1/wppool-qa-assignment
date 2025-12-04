@@ -9,41 +9,41 @@ import CheckoutPage from '../pages/CheckoutPage';
 import MyAccountPage from '../pages/MyAccountPage';
 import OrdersPage from '../pages/OrdersPage';
 
-// Login
+
 Cypress.Commands.add('login', (username, password) => {
   cy.visit(Cypress.env('WP_URL'));
   LoginPage.login(username, password);
 });
 
-// Plugin activation
+
 Cypress.Commands.add('activatePlugin', (pluginName) => {
   cy.visit(Cypress.env('ADMIN_URL') + 'plugins.php');
   PluginPage.activatePlugin(pluginName);
 });
 
-// Create FlexTable
+
 Cypress.Commands.add('createFlexTable', (sheetUrl, tableTitle, tableDescription) => {
   cy.visit(Cypress.env('FLEXTABLE_DASHBOARD_URL'));
-  cy.get('body', { timeout: 10000 }).should('be.visible'); // wait for page
+  cy.get('body', { timeout: 10000 }).should('be.visible');
   FlexTableDashboardPage.clickCreateTable();
   FlexTableCreatePage.fillTableForm(sheetUrl, tableTitle, tableDescription);
   FlexTableCreatePage.saveTable();
 });
 
-// Edit FlexTable
+
 Cypress.Commands.add('editFlexTable', (tableId, options) => {
   cy.visit(`${Cypress.env('FLEXTABLE_DASHBOARD_URL')}#/tables/edit/${tableId}`);
   FlexTableEditPage.updateTable(options);
 });
 
-// Validate frontend table
+
 Cypress.Commands.add('validateFrontendTable', (tableShortcode) => {
   cy.visit(Cypress.env('FRONTEND_PAGE_URL'));
   cy.get('body', { timeout: 10000 }).should('be.visible');
   FrontendTablePage.verifyTableRendered(tableShortcode);
 });
 
-// WooCommerce
+
 Cypress.Commands.add('addToCart', (productName) => {
   cy.visit(Cypress.env('SHOP_URL'));
   ShopPage.addProductToCart(productName);
@@ -67,7 +67,7 @@ Cypress.Commands.add('verifyOrderDetails', (orderId) => {
   OrdersPage.verifyOrder(orderId);
 });
 
-// Utility log
+
 Cypress.Commands.add("logStep", (message) => {
   cy.log(`🔹 ${message}`);
 });
