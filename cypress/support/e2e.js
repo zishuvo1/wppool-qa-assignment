@@ -1,6 +1,6 @@
 import './commands';
 
-// Global before/after hooks
+
 before(() => {
   cy.log("=== Starting WPPOOL Automation Test Suite ===");
 });
@@ -17,13 +17,13 @@ after(() => {
   cy.log("=== WPPOOL Automation Test Suite Completed ===");
 });
 
-// Ignore uncaught JS errors (React / plugin / FlexTable)
+
 Cypress.on('uncaught:exception', (err, runnable) => {
   console.warn("Caught uncaught exception:", err.message);
-  return false; // prevents test fail
+  return false;
 });
 
-// Optional: helper function
+
 Cypress.Commands.add("logStep", (message) => {
   cy.log(`🔹 ${message}`);
 });
